@@ -5,10 +5,10 @@
       <my-button @click="toggleChoice(1)" :isChosen="isCals">Калории</my-button>
     </div>
     <div id="line"></div>
-    <h2>Количество белков: {{ $store.getters['calcs/getProtein'] }}</h2>
-    <h2>Количество жиров: {{ $store.getters['calcs/getFat'] }}</h2>
-    <h2>Количество углеводов: {{ $store.getters['calcs/getCarbs'] }}</h2>
-    <h2 v-if="isCals">Базовый обмен: {{ $store.getters['calcs/getBaseChange'] }}</h2>
+    <h2 id="protein">Количество белков: {{ $store.getters['calcs/getProtein'] }}</h2>
+    <h2 id="fat">Количество жиров: {{ $store.getters['calcs/getFat'] }}</h2>
+    <h2 id="carbs">Количество углеводов: {{ $store.getters['calcs/getCarbs'] }}</h2>
+    <h2 id="base" v-if="isCals">Базовый обмен: {{ $store.getters['calcs/getBaseChange'] }}</h2>
   </div>
 </template>
 
